@@ -57,4 +57,6 @@ function key_release(event)
         if(key2==83)  if(y_move==3)     y_move = 0;
 }
 </script>
-</script>
+<body onload="gameLoop()" onkeydown="key_press(event)" onkeyup="key_release(event)">
+<img src='マップ1.png' id='you' style='position:absolute;height:60;width:60;'>
+</body>
