@@ -30,3 +30,31 @@
 *.exe
 *.out
 *.app
+<script>
+var x = 680;    var y = 700;            var key;
+var x_move = 0; var y_move = 0;
+
+function gameLoop()
+{
+        document.getElementById('you').style.left = x += x_move;
+        document.getElementById('you').style.top = y += y_move;
+        setTimeout("gameLoop()", 10);
+}
+function key_press(event)
+{
+        key = event.which || event.keyCode;
+        if(key==65)     x_move = -3;
+        if(key==87)     y_move = -3;
+        if(key==68)     x_move = 3;
+        if(key==83)     y_move = 3;
+}
+function key_release(event)
+{
+        key2 = event.which || event.keycode;
+        if(key2==65)  if(x_move==-3)     x_move = 0;
+        if(key2==87)  if(y_move==-3)     y_move = 0;
+        if(key2==68)  if(x_move==3)     x_move = 0;
+        if(key2==83)  if(y_move==3)     y_move = 0;
+}
+</script>
+</script>
